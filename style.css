@@ -3,7 +3,7 @@ body{
 }
 /*Body header */
 #body-header{
-    height: 65vh;
+    height: 55vh;
     background-image: url(image/macbook_mouse.jpg);
     background-size: cover;
     background-position: center;
@@ -70,6 +70,7 @@ body{
 #my-image{
     height: 12rem;
     width: 12rem;
+    padding-left: 30px;
     margin: auto;
     margin-top: -12vh;
 }
@@ -78,4 +79,198 @@ body{
     width: 90%;
     align-items: center;
     border-radius: 50%;
+    box-shadow: 0px 0px 13px 4px black;
+}
+#about-text{
+    padding: 15px;
+    text-align: center;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+section:nth-child(2n){
+    background-color: rgba(216, 191, 216, 0.521);
+}
+
+section:nth-child(2n+1){
+    background-color: white;
+}
+section:target{
+    background-color: rgba(176, 196, 222, 0.76);
+}
+/*Skill*/
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    margin: 10px;
+    font-weight: 400;
+    text-align: center;
+    
+}
+.section-heading span{
+    font-size: 40px;
+    color: darkblue;
+    display: inline-block;
+    padding-top: 10px ;
+    margin-right: 00.5rem;
+}
+
+#skill{
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-display{
+    height: auto;
+    width: 55%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.skills-bunch{
+    width: 9rem;
+    height: 1.7rem;
+    background-color: lightgray;
+    border-radius: 0.9rem;
+    margin: 7px;
+}
+.skills-bunch>div{
+    border-radius: 20px 0px 0px 20px;
+}
+.box-colour-blue{
+    background-color: rgb(80, 181, 248);
+}
+.box-colour-green{
+    background-color: rgb(31, 197, 120);
+}
+.box-colour-purple{
+    background-color: rgb(173, 56, 209);
+}
+.box-colour-Yellow{
+    background-color: rgb(153, 192, 11);
+}
+
+.skills-box-75{
+    width: 75%;
+    height: inherit;
+}
+.skills-box-85{
+    width: 85%;
+    height: inherit;
+}
+.skills-box-68{
+    width: 68%;
+    height: inherit;
+}.skills-box-90{
+    width: 90%;
+    height: inherit;
+}.skills-box-40{
+    width: 40%;
+    height: inherit;
+}
+.skills-name{
+    color: rgba(63, 63, 63, 0.781);
+    font-size: 1rem;
+    margin-left: 5px;
+} 
+
+/*education*/
+.timeline{
+    position: relative;
+    width: 75%;
+}
+.timeline-box{
+    position: relative;
+    margin: 5px;
+    padding: 10px;
+    width: 40%;
+    left: 5%;
+    min-height: 150px;
+    background-color: rgba(238, 130, 238, 0.158);
+}
+.timeline-box:nth-child(2n){
+    left:53%;
+}
+
+.btech{
+    font-size: 20px;
+    font-family: initial;
+    font-weight: 700;
+    text-align:left;
+    color: rgb(77, 24, 82);
+}
+.college{
+    font-size: 18px;
+    font-weight: 400;
+}
+.date-marks{
+font-size: 17px;
+text-align: right;
+font-weight: 400;
+color: rgb(111, 75, 114);
+}
+.date-marks-12{
+    font-size: 17px;
+    text-align: left;
+    font-weight: 400;
+    color: rgb(111, 75, 114);
+    }
+/*projects*/
+.projects{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: auto;
+    margin-bottom: 20px;
+    
+}
+.image-size{
+    height: 20rem;
+    width: 20rem;
+    padding-left: 30px;
+    margin: auto;
+
+}
+.about-project{
+    display: none;
+}
+
+.image-size a img{
+    height: 90%;
+    width: 90%;
+    align-items: center;
+    border-radius: 60px 20px;
+}
+.image-size a img:hover{
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 5px 10px 4px black;
+}
+.image-size a img:hover + .about-project{
+    display: block;
+}
+
+
+
+/*contact*/
+#Contact{
+
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( to top right,rgba(54, 54, 243, 0.692),rgba(199, 106, 199, 0.555) 65%);
+}
+.Contact-display{
+    height: 100px;
+    width: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
