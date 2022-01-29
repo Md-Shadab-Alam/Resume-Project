@@ -55,14 +55,13 @@ body{
 }
  @media screen and (max-width: 800px) {
      .navigation ul{
-         position: fixed;
+         position: absolute;
          top:25px;
          right: -110%;
          background: rgba(17, 17, 17, 0.856); /*make trans[arent bg*/
          height: 50vh;
          width: 100%;
-         display: block;
-         transition: all 0.3s ease;
+         display: none;
      }
      .logo{
          display: block;
@@ -79,6 +78,7 @@ body{
     }
      #click:checked~ul{
          right: 0%;
+         display: block;
      }
      .menu-btn{
          display: block;
@@ -377,8 +377,8 @@ color: rgb(111, 75, 114);
     html{
         font-size: 15px;
     }
-
 }
+
 /*projects*/
 .projects{
     display: flex;
@@ -398,7 +398,6 @@ color: rgb(111, 75, 114);
 .about-project{
     display: none;
 }
-
 .image-size a img{
     height: 90%;
     width: 90%;
@@ -414,21 +413,59 @@ color: rgb(111, 75, 114);
     display: block;
 }
 
-
-
 /*contact*/
 #Contact{
-
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     padding-bottom: 20vh;
     background-image: linear-gradient( to top right,rgba(54, 54, 243, 0.692),rgba(199, 106, 199, 0.555) 65%);
 }
 .Contact-display{
-    height: 100px;
+    height: auto;
     width: 75%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+input{
+    width: 200%;
+    height: 10%;
+    border-radius: 10%;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 35px;
+    box-sizing: border-box;
+}
+textarea{
+    width: 200%;
+    height: 40%;
+    border-radius: 6%;
+    padding: 15px 15px 15px 15px;
+    box-sizing: border-box;
+}
+button{
+    font-size: 2rem;
+}
+.Contact-icon{
+    margin-left: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;   
+}
+
+@media screen and (max-width: 800px){
+    input{
+        width: 110%;
+    }
+    textarea{
+        width: 110%;
+    }
+    .Contact-icon{
+        margin-left: 65px;
+        margin-right: 45px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
 }
