@@ -9,18 +9,35 @@ body{
     background-position: center;
     background-attachment: fixed;
 }
-
+#click{
+    display: none;
+}
 
 /*Horizontal List */
+.navigation{
+    
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;      
+}
+.logo{
+    display: none;
+}
+.menu-btn{
+    color: azure;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
 .horizontal-list{
+    display: flex;
     list-style: none;
     padding-left: 0px;
-    margin: 0px;
 }
 
 .horizontal-list li{ 
-    display: inline-block;
-    margin: 5px 18px 18px 0px;
+    margin: 5px 28px 18px 10px;
 }
 
 .horizontal-list li a{
@@ -36,6 +53,40 @@ body{
 .text-center{
     text-align: center;
 }
+ @media screen and (max-width: 800px) {
+     .navigation ul{
+         position: fixed;
+         top:25px;
+         right: -110%;
+         background: rgba(17, 17, 17, 0.856); /*make trans[arent bg*/
+         height: 50vh;
+         width: 100%;
+         display: block;
+         transition: all 0.3s ease;
+     }
+     .logo{
+         display: block;
+         padding-right: 75%;
+         font-size: 150%;
+         color: azure;
+     }
+     .navigation{
+        height: 40px;
+        background-color: rgba(0, 0, 0, 0.671);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;      
+    }
+     #click:checked~ul{
+         right: 0%;
+     }
+     .menu-btn{
+         display: block;
+     }
+     .horizontal-list li{
+         margin: 20px 0;
+     }
+ }
 
 /*Name and Social Icons*/
 #name-social-container{
@@ -48,9 +99,21 @@ body{
     color: azure;
     font-weight: 700;
     margin-bottom: 0.5rem;
+    text-align: center;
     
 }
-
+.social-icon{
+    list-style: none;
+    padding: left 0px;
+   text-align: center;
+}
+.social-icon li{
+    display: inline-block;
+    margin: 0px 4px 4px 0px;
+}
+.social-icon li a{
+    color: azure;
+}
 .social-icon li a i{
     padding: 10px;
     font-size: 1rem;
@@ -59,6 +122,25 @@ body{
 
 .social-icon li a i:hover{
     box-shadow: 0px 5px 10px 4px white;
+}
+
+@media screen and (max-width: 800px){
+    #name-social-container{
+        margin-top: 20vh;
+    }
+    
+    #my-name{
+        font-size: 2rem;
+        letter-spacing: 0.1rem;
+        color: azure;
+        font-weight: 700;
+        margin-left: 25px;
+        text-align: left;
+    }
+
+    .social-icon{
+        text-align: left;
+    }
 }
 
 /*About section*/
@@ -84,6 +166,25 @@ body{
 #about-text{
     padding: 15px;
     text-align: center;
+}
+#about-text-in-mobile{
+    display: none;
+}
+
+@media screen and (max-width: 800px){
+
+    #about-text-in-mobile{
+        display: block;
+        color: azure;
+        margin-left: 25px;
+    }
+    #my-image{
+        display: none;
+    }
+
+    #about-text{
+        display: none;
+    }   
 }
 
 section{
@@ -200,6 +301,40 @@ section:target{
     left:53%;
 }
 
+.timeline-divider{
+    position: absolute;
+    height: 75%;
+    width: 0;
+    border: 1.5px dashed black;
+    top: 10%;
+    left: 50%;
+}
+.timeline-traveller{
+    position: sticky;
+    top: 20%;
+    transform: rotate(90deg);
+    padding-left: 1px;
+}
+#dot1-on-timeline{
+    position: relative;
+    top: -5%;
+    transform: rotate(90deg);
+    font-size: 0.5rem;
+}
+
+#dot2-on-timeline{
+    position: relative;
+    top: 35%;
+    transform: rotate(90deg);
+    font-size: 0.5rem;
+}
+#dot3-on-timeline{
+    position: relative;
+    top: 75%;
+    transform: rotate(90deg);
+    font-size: 0.5rem;
+}
+
 .btech{
     font-size: 20px;
     font-family: initial;
@@ -223,6 +358,27 @@ color: rgb(111, 75, 114);
     font-weight: 400;
     color: rgb(111, 75, 114);
     }
+
+    
+@media screen and (max-width: 800px) {
+    .timeline-divider{
+        left: 8%;
+    }
+    .timeline-box{
+        left: 12%;
+        width: 80%;
+    }
+    .timeline-box:nth-child(2n){
+        left:12%;
+    }
+    .date-marks-12{
+    text-align: right;
+    }
+    html{
+        font-size: 15px;
+    }
+
+}
 /*projects*/
 .projects{
     display: flex;
@@ -265,12 +421,14 @@ color: rgb(111, 75, 114);
 
     display: flex;
     flex-direction: column;
+    padding-bottom: 20vh;
     background-image: linear-gradient( to top right,rgba(54, 54, 243, 0.692),rgba(199, 106, 199, 0.555) 65%);
 }
 .Contact-display{
     height: 100px;
     width: 75%;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }

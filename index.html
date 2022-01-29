@@ -6,81 +6,60 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" 
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
-
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     </head>
+    
     <body>
         <header id="body-header">
 
 
-            <nav>
+            <nav class="navigation">
+                <div class="logo">Shadab</div>
+                <input type="checkbox" id="click">
+                <label for="click" class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
                 <ul class="horizontal-list text-center">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#skills">Skills</a>
-                    </li>
-                    <li>
-                        <a href="#Experiance">Experiance</a>
-                    </li>
-                    <li>
-                        <a href="#Education">Education</a>
-                    </li>
-                    <li>
-                        <a href="#Projects">Projects</a>
-                    </li>
-                    <li>
-                        <a href="#Contact">Contact</a>
-                    </li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#Experiance">Experiance</a></li>
+                    <li><a href="#Education">Education</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </nav>
-
-
-            <div id="name-social-container">
-                <div class="text-center">
-                    <h1 id="my-name">
-                        MD SHADAB ALAM
-                    </h1>
+            
+            
+            <div>
+                <div id="name-social-container">
+                        <h1 id="my-name">
+                            MD SHADAB ALAM
+                        </h1>
                 </div>
+
+                <div><p id="about-text-in-mobile">
+                    Programmer Analyst Trainee at Cognizent
+                    <br>
+                    Full Stack Web Developer|| Blockchain Developer
+                </p></div>
+                <div><nav>
+                    <ul class="social-icon">
+                        <li><a href="#">
+                                <i class="fab fa-linkedin-in"></i>
+                        </a></li>
+                        <li><a href="#">
+                                <i class="fab fa-github"></i>
+                        </a></li>
+                        <li><a href="#">
+                                <i class="fab fa-hackerrank"></i>
+                        </a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                </nav></div>
             </div>
 
-
-
-            <nav>
-                <ul class="horizontal-list text-center social-icon">
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fab fa-hackerrank"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            
-            
         </header>
         <main>
 
@@ -88,11 +67,11 @@
                 <div id="my-image">
                     <img src="image/WhatsApp Image 2021-12-17 at 22.32.04.jpeg">
                 </div>
-                <p id="about-text">
+                <div><p id="about-text">
                     Programmer Analyst Trainee at Cognizent
                     <br>
                     Full Stack Web Developer|| Blockchain Developer
-                </p>
+                </p></div>
             </section>
 
             
@@ -232,6 +211,22 @@
                         Percentage- 60.8%
                         </div>
                     </div>
+                    <div class="timeline-divider">
+                        <div class="timeline-traveller">
+                            <i class="fas fa-angle-double-right"></i>
+                        </div>
+                        <div id="dot1-on-timeline">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div id="dot2-on-timeline">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        <div id="dot3-on-timeline">
+                            <i class="fas fa-circle"></i>
+                        </div>
+                        
+
+                    </div>
                 </div>
             </section>
 
@@ -277,6 +272,7 @@
         
 
             <section id="Contact">
+                <div>
                 <h1 class="section-heading">
                     <span>
                         <i class="far fa-address-card"></i>
@@ -285,7 +281,8 @@
                     Contact
                     </span>
                 </h1>
-                <div type=Contact-display>
+            </div>
+                <div class=Contact-display>
                     <div>
                         <form>
                             <input type="text" placeholder=" Your Name"><br>
